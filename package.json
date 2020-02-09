@@ -3,8 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "clean": "rimraf ./dist",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build --prod",
     "test": "ng test --no-watch --browsers=ChromeHeadlessCI",
     "test:watch": "ng test",
     "lint": "ng lint",
