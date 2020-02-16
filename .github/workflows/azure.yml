@@ -28,12 +28,13 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ env.NODE_VERSION }}
-    - name: npm install, build, and test
+    - name: npm install, test, clean, and build prod
       run: |
         # Build and test the project, then
         # deploy to Azure Web App.
         npm install
         npm run test --if-present
+        npm run e2e --if-present
         npm run clean
         npm run build:prod --if-present
     - name: 'Deploy to Azure WebApp'
