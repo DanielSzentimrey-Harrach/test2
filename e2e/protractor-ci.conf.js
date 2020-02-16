@@ -1,9 +1,9 @@
-const config = require('.protractor.con').config;
+const config = require('./protractor.conf').config;
 
 config.capabilities = {
-    browserName: 'chorme',
+    browserName: 'chrome',
     chomeOptions: {
-        args: ['--headless', '--no-sandbox']
+        args: ['--headless', '--no-sandbox', '--disable-gpu']
     }
 };
 
