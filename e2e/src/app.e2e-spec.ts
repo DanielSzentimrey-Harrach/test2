@@ -30,27 +30,27 @@ describe('Calculator App', () => {
 
   it('basic operations work and update the textarea', () => {
     page.navigateTo();
-    page.getNumberButton('5').click();
+    page.getNumberButton('50').click();
     page.getAddButton().click();
-    page.getNumberButton('7').click();
+    page.getNumberButton('70').click();
     page.getEnterButton().click();
-    expect(page.getTextareaContent()).toBe('12');
+    expect(page.getTextareaContent()).toBe('120');
 
-    page.getNumberButton('5').click();
+    page.getNumberButton('50').click();
     page.getSubtractButton().click();
-    page.getNumberButton('7').click();
+    page.getNumberButton('70').click();
     page.getEnterButton().click();
-    expect(page.getTextareaContent()).toBe('-2');
+    expect(page.getTextareaContent()).toBe('-20');
 
-    page.getNumberButton('5').click();
+    page.getNumberButton('50').click();
     page.getMultiplyButton().click();
-    page.getNumberButton('7').click();
+    page.getNumberButton('70').click();
     page.getEnterButton().click();
-    expect(page.getTextareaContent()).toBe('35');
+    expect(page.getTextareaContent()).toBe('3500');
 
-    page.getNumberButton('5').click();
+    page.getNumberButton('50').click();
     page.getDivideButton().click();
-    page.getNumberButton('2').click();
+    page.getNumberButton('20').click();
     page.getEnterButton().click();
     expect(page.getTextareaContent()).toBe('2.5');
   });
